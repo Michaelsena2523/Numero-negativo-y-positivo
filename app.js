@@ -1,20 +1,17 @@
+
+
 const n1 = document.getElementById("n1");
-const n2 = document.getElementById("n2");
-const n3 = document.getElementById("n3");
-const contenedor = document.getElementById("contenedor");
+const contenedor = document.getElementById("contenedo")
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
    
-    const num1 = parseFloat(n1.value);
-    const num2 = parseFloat(n2.value);
-    const num3 = parseFloat(n3.value);
-    
- 
-    const resultado = num1 + num2 + num3;
-
-    const total = resultado / 3;
+    const num = parseFloat(n1.value);
     
 
-    contenedor.textContent = `Total suma: ${resultado}, porciento: ${total}`;
+    if (num >= 0) {
+        contenedor.textContent = `Este número es positivo = ${num}`;
+    } else {
+        contenedor.textContent = `Este número es negativo = ${num}`;
+    }
 });
